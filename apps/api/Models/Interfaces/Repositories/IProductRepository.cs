@@ -1,5 +1,7 @@
 
-namespace Api.Models;
+using Api.Models.Classes;
+
+namespace Api.Models.Interfaces;
 
 public interface IProductRepository
 {

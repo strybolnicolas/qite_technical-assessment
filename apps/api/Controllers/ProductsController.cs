@@ -1,8 +1,7 @@
 
-using Api.DTOs;
-using Api.Models;
+using Api.Models.DTOs;
+using Api.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-
 
 [ApiController]
 [Route("api/[controller]")]

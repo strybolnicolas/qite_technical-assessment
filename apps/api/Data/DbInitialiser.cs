@@ -1,12 +1,36 @@
 
+using Api.Models.Classes;
 using Bogus;
-using Api.Models;
-
 
 namespace Api.Data;
 
 public static class DbInitialiser
 {
+
+  public static void Initialise(ApiDbContext context)
+  {
+    context.Database.EnsureCreated();
+
+    if (!context.Users.Any())
+    {
+      context.Users.AddRange(
+          new User
+          {
+            Username = "admin",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"),
+            Role = "Admin"
+          },
+          new User
+          {
+            Username = "user",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("user123"),
+            Role = "User"
+          }
+      );
+      context.SaveChanges();
+    }
+  }
+
   public static void Seed(ApiDbContext context)
   {
     if (context.Products.Any())

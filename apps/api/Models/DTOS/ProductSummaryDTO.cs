@@ -1,10 +1,10 @@
 
-namespace Api.Models.DTOs
+
+namespace Api.Models.DTOs;
+
+public class ProductSummaryDto
 {
-  public class ProductSummaryDto
-  {
-    public int Id { get; set; }
-    public string Name { get; set; } = null!;
-    public decimal Price { get; set; }
-  }
+  public int Id { get; set; }
+  public string Name { get; set; } = null!;
+  public decimal Price { get; set; }
 }

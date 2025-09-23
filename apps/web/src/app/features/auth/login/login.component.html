@@ -18,7 +18,10 @@
   </div>
 
 
-  <form nz-form [formGroup]="validateForm" class="login-form md:w-1/2 flex flex-col items-center" (ngSubmit)="submitForm()">
+  <form class="login-form md:w-1/2 flex flex-col items-center"
+        nz-form
+        [formGroup]="validateForm"
+        (ngSubmit)="submitForm()">
     <nz-form-item>
       <nz-form-control nzErrorTip="Please input your username!">
         <nz-input-group nzPrefixIcon="user">

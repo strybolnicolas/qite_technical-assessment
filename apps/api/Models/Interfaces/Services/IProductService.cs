@@ -1,8 +1,7 @@
 
-using Api.DTOs;
+using Api.Models.DTOs;
 
-
-namespace Api.Models;
+namespace Api.Models.Interfaces;
 
 public interface IProductService
 {
