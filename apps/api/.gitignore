@@ -1,0 +1,19 @@
+
+
+# Build Folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# OS generated
+.DS_Store
+
+# Visual Studio Code
+.vscode/
